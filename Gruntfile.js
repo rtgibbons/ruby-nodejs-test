@@ -29,6 +29,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['s3:dev']);
+  grunt.registerTask('saveAssetVersion', 'Log some stuff.', function() {
+    grunt.file.write('.env', 'ASSET_VERSION=' . TSTAMP);
+  });
+
+  grunt.registerTask('default', ['s3:dev', 'saveAssetVersion']);
 
 };
