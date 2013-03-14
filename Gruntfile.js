@@ -29,10 +29,12 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-s3');
+
   grunt.registerTask('saveAssetVersion', 'Log some stuff.', function() {
-    grunt.file.write('.env', 'ASSET_VERSION=' . TSTAMP);
+    grunt.file.write('.env', 'ASSET_VERSION=' + TSTAMP);
   });
 
-  grunt.registerTask('default', ['s3', 'saveAssetVersion']);
+  grunt.registerTask('default', ['s3:dev', 'saveAssetVersion']);
 
 };
