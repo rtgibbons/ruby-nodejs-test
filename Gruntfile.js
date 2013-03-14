@@ -33,6 +33,6 @@ module.exports = function(grunt) {
     grunt.file.write('.env', 'ASSET_VERSION=' . TSTAMP);
   });
 
-  grunt.registerTask('default', ['s3:dev', 'saveAssetVersion']);
+  grunt.registerTask('default', ['s3', 'saveAssetVersion']);
 
 };
