@@ -8,6 +8,6 @@
   "devDependencies": {
     "grunt-cli": "*",
     "grunt": "~0.4.0",
-    "grunt-s3": "~0.1.0"
+    "grunt-s3": "git://github.com/pifantastic/grunt-s3.git#1bbbb107e1af7b2fb7b1d219c47aaaa9b556a179"
   }
 }
